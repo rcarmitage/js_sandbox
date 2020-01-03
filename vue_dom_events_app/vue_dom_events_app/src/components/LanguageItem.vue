@@ -1,10 +1,11 @@
 <template lang="html">
-    <p>LanguageItem component</p>
+    <p>{{ language.name }}</p>
 </template>
 
 <script>
 export default {
-  name: "language-item"
+  name: "language-item",
+  props: ["language"]
 };
 </script>
 

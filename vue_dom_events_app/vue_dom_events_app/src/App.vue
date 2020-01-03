@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <h1 id="title">Events Practise</h1>
-    <language-item></language-item>
+    <language-item v-for="language in languages" :key="index" :language="language"></language-item>
   </div>
 </template>
 
