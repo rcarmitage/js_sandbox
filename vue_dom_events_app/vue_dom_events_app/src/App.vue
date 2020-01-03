@@ -1,28 +1,39 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template lang="html">
+  <div>
+    <h1 id="title">Events Practise</h1>
+    <language-item></language-item>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LanguageItem from "./components/LanguageItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
+  data() {
+    return {
+      languages: [
+        { name: "Ruby", learning: true },
+        { name: "JavaScript", learning: true },
+        { name: "Java", learning: true },
+        { name: "Python", learning: false },
+        { name: "TypeScript", learning: false }
+      ]
+    };
+  },
   components: {
-    HelloWorld
+    'language-item': LanguageItem
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="css">
+body {
+  font-family: sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+#title {
+  color: #713e5a;
 }
 </style>
