@@ -43,9 +43,4 @@ body {
 #title {
   color: #713e5a;
 }
-
-#list-item {
-  font-weight: bold;
-  color: #413C58;  
-}
 </style>

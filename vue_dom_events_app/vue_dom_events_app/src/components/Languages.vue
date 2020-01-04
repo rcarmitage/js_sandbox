@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="language-style">
+    <div>
       <div v-bind:key="language.id" v-for="language in languages">
         <LanguageItem v-bind:language="language" />
       </div>
@@ -19,7 +19,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.language-style {
-  color: #E8D6CB; 
-}
 </style>
