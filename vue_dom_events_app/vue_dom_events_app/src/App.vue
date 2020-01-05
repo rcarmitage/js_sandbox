@@ -1,7 +1,24 @@
 <template lang="html">
   <div id="app">
     <h1 id="title">Events Practise</h1>
-    <Languages v-bind:languages="languages" />
+    <v-container class="vuetify-flexbox-container">
+      <v-layout row wrap justify-space-around>
+        <v-flex xs12 md6>
+          <Languages v-bind:languages="languages" />
+        </v-flex>
+        <v-flex xs12 md6>
+          <v-btn outline block class="placeholder">Placeholder</v-btn>
+        </v-flex>
+      </v-layout>
+      <v-layout row wrap justify-space-around>
+        <v-flex xs12 md6>
+          <v-btn outline block class="placeholder">Placeholder</v-btn>
+        </v-flex>
+        <v-flex xs12 md6>
+          <v-btn outline block class="placeholder">Placeholder</v-btn>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
@@ -28,16 +45,25 @@ export default {
 
 <style lang="css">
 * {
-  box-sizing: border-box;
-  /* margin: 0; */
-  padding: 0;
+  /* box-sizing: border-box; */
 }
+
 body {
   font-family: sans-serif;
   text-align: center;
   line-height: 1.5rem;
+  padding: 20px;
 }
+
 #title {
   color: #713e5a;
+}
+
+#vuetify-flexbox-container {
+}
+
+.placeholder {
+  margin: 10px;
+  font-style: oblique;
 }
 </style>
