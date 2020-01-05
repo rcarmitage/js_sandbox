@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="app">
-    <h1 id="title">Events Practise</h1>
+    <Header />
     <v-container class="vuetify-flexbox-container">
       <v-layout row wrap justify-space-around>
         <v-flex xs12 md6>
@@ -23,10 +23,13 @@
 </template>
 
 <script>
+import Header from "./components/layout/Header.vue";
 import Languages from "./components/Languages.vue";
+
 export default {
   name: "app",
   components: {
+    Header,
     Languages
   },
   data() {
@@ -55,16 +58,8 @@ export default {
 
 body {
   font-family: sans-serif;
-  text-align: center;
   line-height: 1.5rem;
-  padding: 20px;
-}
-
-#title {
-  color: #713e5a;
-}
-
-#vuetify-flexbox-container {
+  margin: 20px;
 }
 
 .placeholder {
