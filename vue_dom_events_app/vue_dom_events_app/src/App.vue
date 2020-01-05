@@ -1,6 +1,7 @@
 <template lang="html">
   <div id="app">
     <Header />
+    <AddLanguage v-on:add-language="addLanguage" />
     <v-container class="vuetify-flexbox-container">
       <v-layout row wrap justify-space-around>
         <v-flex xs12 md6>
@@ -25,12 +26,14 @@
 <script>
 import Header from "./components/layout/Header.vue";
 import Languages from "./components/Languages.vue";
+import AddLanguage from "./components/AddLanguage.vue";
 
 export default {
   name: "app",
   components: {
     Header,
-    Languages
+    Languages,
+    AddLanguage
   },
   data() {
     return {
@@ -46,6 +49,9 @@ export default {
   methods: {
     deleteLanguage(id) {
       this.languages = this.languages.filter(language => language.id != id);
+    },
+    addLanguage(newLanguage) {
+      this.languages = [...this.languages, newLanguage];
     }
   }
 };
@@ -60,6 +66,18 @@ body {
   font-family: sans-serif;
   line-height: 1.5rem;
   margin: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #202C39;
+  color: #E8D6CB;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #2E5266;
 }
 
 .placeholder {
