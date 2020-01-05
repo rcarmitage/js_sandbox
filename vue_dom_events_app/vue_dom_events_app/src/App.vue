@@ -16,9 +16,9 @@ export default {
   data() {
     return {
       languages: [
-        { id: 1, name: "Ruby", learning: true },
-        { id: 2, name: "JavaScript", learning: true },
-        { id: 3, name: "Java", learning: true },
+        { id: 1, name: "Ruby", learning: false },
+        { id: 2, name: "JavaScript", learning: false },
+        { id: 3, name: "Java", learning: false },
         { id: 4, name: "Python", learning: false },
         { id: 5, name: "TypeScript", learning: false }
       ]

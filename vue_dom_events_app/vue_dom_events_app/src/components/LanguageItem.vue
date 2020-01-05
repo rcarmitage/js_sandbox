@@ -2,7 +2,9 @@
   <div class="language-item" v-bind:class="{'is-learning':language.learning}">
     <p>
         <input type="checkbox" v-on:change="markLearning">
-        {{ language.name }}</p>
+        {{ language.name }}
+        <button class="del">X</button>
+        </p>
   </div>
 </template>
 
@@ -22,20 +24,22 @@ export default {
   .language-item {
     background: #202C39;
     color: #E8D6CB;
-    padding: 10px;
-    border-bottom: 1px, #383F51 dotted;
+    text-align: left;
+    padding: 0.2rem;
+    border-bottom: 1px #999 dotted;
   }
 
   .is-learning {
-    text-decoration: line-through;
+    text-decoration: underline overline;
   }
 
-  .mark-learning {
+  .del {
     background: #713e5a;
-    color: #383F51;
+    color: #202C39;
+    font-weight: bold;
     border: none;
     padding: 5px 9px;
-    border-radius: 50%;
+    border-radius: 20%;
     cursor: pointer;
     float: right;
   }
