@@ -1,7 +1,7 @@
 <template lang="html">
     <div>
       <div v-bind:key="language.id" v-for="language in languages">
-        <LanguageItem v-bind:language="language" />
+        <LanguageItem v-bind:language="language" v-on:del-language="$emit('del-language', language.id)" />
       </div>
     </div>
 </template>

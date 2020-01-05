@@ -4,7 +4,7 @@
     <v-container class="vuetify-flexbox-container">
       <v-layout row wrap justify-space-around>
         <v-flex xs12 md6>
-          <Languages v-bind:languages="languages" />
+          <Languages v-bind:languages="languages" v-on:del-language="deleteLanguage" />
         </v-flex>
         <v-flex xs12 md6>
           <v-btn outline block class="placeholder">Placeholder</v-btn>
@@ -39,6 +39,11 @@ export default {
         { id: 5, name: "TypeScript", learning: false }
       ]
     };
+  },
+  methods: {
+    deleteLanguage(id) {
+      this.languages = this.languages.filter(language => language.id != id);
+    }
   }
 };
 </script>
