@@ -3,7 +3,7 @@
     <p>
         <input type="checkbox" v-on:change="markLearning">
         {{ language.name }}
-        <button class="del">X</button>
+        <button @click="$emit('del-language', language.id)" class="del">x</button>
         </p>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
     background: #202C39;
     color: #E8D6CB;
     text-align: left;
-    padding: 0.2rem;
+    padding: 0.6rem;
     border-bottom: 1px #999 dotted;
   }
 
@@ -38,7 +38,7 @@ export default {
     color: #202C39;
     font-weight: bold;
     border: none;
-    padding: 5px 9px;
+    padding: 2px 8px;
     border-radius: 20%;
     cursor: pointer;
     float: right;

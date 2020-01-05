@@ -7,7 +7,6 @@
 
 <script>
 import Languages from "./components/Languages.vue";
-
 export default {
   name: "app",
   components: {
@@ -33,13 +32,11 @@ export default {
   /* margin: 0; */
   padding: 0;
 }
-
 body {
   font-family: sans-serif;
   text-align: center;
   line-height: 1.5rem;
 }
-
 #title {
   color: #713e5a;
 }
