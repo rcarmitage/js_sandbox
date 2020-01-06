@@ -1,7 +1,7 @@
 <template>
     <div>
         <form @submit="addLanguage">
-            <input type="text" v-model="name" name="name" placeholder="Add language...">
+            <input type="text" v-model="name" name="name" placeholder=" Add language...">
             <input type="submit" value="Submit language" class="btn">
         </form>
     </div>

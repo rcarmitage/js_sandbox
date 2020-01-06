@@ -1,13 +1,13 @@
 <template lang="html">
   <div id="app">
     <Header />
-    <AddLanguage v-on:add-language="addLanguage" />
     <v-container class="vuetify-flexbox-container">
       <v-layout row wrap justify-space-around>
-        <v-flex xs12 md6>
+        <v-flex xs12 md6 class="box">
+          <AddLanguage v-on:add-language="addLanguage" id="add-language" />
           <Languages v-bind:languages="languages" v-on:del-language="deleteLanguage" />
         </v-flex>
-        <v-flex xs12 md6>
+        <v-flex xs12 md6 class="box">
           <v-btn outline block class="placeholder">Placeholder</v-btn>
         </v-flex>
       </v-layout>
@@ -59,7 +59,8 @@ export default {
 
 <style lang="css">
 * {
-  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -78,6 +79,16 @@ body {
 
 .btn:hover {
   background: #2E5266;
+}
+
+.box {
+  background: #E8D6CB;
+  margin: 2px;
+}
+
+#add-language {
+  margin: 5px;
+  border: 1px #202C39 solid;
 }
 
 .placeholder {
