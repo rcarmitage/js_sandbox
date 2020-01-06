@@ -23,14 +23,12 @@
 </template>
 
 <script>
-import Header from "../components/layout/Header.vue";
 import Languages from "../components/Languages.vue";
 import AddLanguage from "../components/AddLanguage.vue";
 
 export default {
   name: "Home",
   components: {
-    Header,
     Languages,
     AddLanguage
   },
