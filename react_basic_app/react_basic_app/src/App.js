@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Link} from 'react-router-dom';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           This is an app. Rob is a master hacker.
         </p>
         <p>
-          <Link to="/components/TestPage.js">Test Page</Link>
+          <Link to="../components/TestPage.js">Test Page</Link>
         </p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
