@@ -1,19 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Main from './components/Main';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          This is an app. Rob is a master hacker.
-        </p>
-        <p>
-          <Link to="../components/TestPage.js">Test Page</Link>
-        </p>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Main />
+      </div>
+    );
+  }
 }
 
 export default App;
