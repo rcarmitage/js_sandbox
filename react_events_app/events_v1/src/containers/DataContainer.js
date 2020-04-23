@@ -1,11 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './NavBar';
+import NavBar from '../components/NavBar';
 import Home from '../components/Home';
 import DataRenderPage from '../components/DataRenderPage';
-import ErrorPage from './ErrorPage';
+import ErrorPage from '../components/ErrorPage';
 
-class Main extends Component {
+class DataContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      exampledata: []
+    }
+  }
+
   render() {
     return (
       <Router>
@@ -22,4 +30,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default DataContainer;
