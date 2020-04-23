@@ -31,7 +31,7 @@ class DataComponent extends Component {
         <Link>
           <button>Add data</button>
         </Link>
-        <DataList data={this.props.data} />
+        <DataList data={this.state.data} />
       </div>
     );
   }

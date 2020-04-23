@@ -6,7 +6,7 @@ class DataList extends Component {
     const exampleNodes = this.props.data.map (example => {
       return (
         <DataItem author={example.author} key={example.id} >
-          {example.title}
+          {example.title} {example.info}
         </DataItem>
       );
     });

@@ -5,7 +5,7 @@ class DataItem extends Component {
     return (
       <div>
         <h4>{this.props.children}</h4>
-        <p>{this.props.author}</p>
+        <p>{this.props.info}</p>
       </div>
     );
   }
