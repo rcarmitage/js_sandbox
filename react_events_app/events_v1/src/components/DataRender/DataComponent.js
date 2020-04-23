@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import DataList from './DataList';
-import DataItem from './DataItem';
 
 class DataComponent extends Component {
   constructor(props) {
